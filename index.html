@@ -1,2 +1,74 @@
-# juvi-love
-A love note generator for couples 💜
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Juvi Love Note Generator</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #f9c5d1, #a18cd1);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+      color: #fff;
+    }
+    h1 {
+      margin-bottom: 10px;
+      font-size: 2em;
+    }
+    p {
+      margin-bottom: 30px;
+      font-size: 1.2em;
+    }
+    button {
+      background-color: #fff;
+      color: #a18cd1;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #f0e6f7;
+    }
+    #note {
+      margin-top: 20px;
+      font-size: 1.4em;
+      max-width: 80%;
+    }
+  </style>
+</head>
+<body>
+  <h1>💌 Juvi Love Note Generator 💌</h1>
+  <p>Click below to get a sweet love note for your partner.</p>
+  <button onclick="generateNote()">Generate Love Note</button>
+  <div id="note"></div>
+
+  <script>
+    const notes = [
+      "You're the best part of my day, every day 💜",
+      "I love you more than words can say 💌",
+      "Even miles apart, my heart is always with you 💕",
+      "You make me feel safe, loved, and seen 🫶",
+      "I'm so proud of the way we love each other 💞",
+      "You're my favorite notification every time 💖",
+      "Being yours is the best feeling ever 🌈",
+      "We’re a perfect team, no matter the distance ✨",
+      "You and me forever, no matter what 🐾",
+      "I fall in love with you more every day 💘"
+    ];
+
+    function generateNote() {
+      const note = notes[Math.floor(Math.random() * notes.length)];
+      document.getElementById("note").textContent = note;
+    }
+  </script>
+</body>
+</html>

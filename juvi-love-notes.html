@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juvi Love Note Generator</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #fbc2eb, #a6c1ee);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: #5e2572;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+    .note-box {
+      background: white;
+      border: 4px dashed #d38fff;
+      border-radius: 25px;
+      padding: 30px;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .note-box h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .note-box p {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .heart {
+      color: #b54fff;
+      font-size: 32px;
+      margin-top: 10px;
+    }
+    .kittens {
+      margin-top: 20px;
+    }
+    .kittens img {
+      height: 80px;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="note-box">
+    <h1>Juvi's Daily Love Note 💌</h1>
+    <p id="note">You're the best part of my day.</p>
+    <div class="heart">💜</div>
+    <div class="kittens">
+      <img src="https://i.imgur.com/3j2QYpn.png" alt="Kitten 1">
+      <img src="https://i.imgur.com/U6WSvkR.png" alt="Kitten 2">
+    </div>
+  </div>
+
+  <script>
+    const notes = [
+      "You're always on my mind.",
+      "I’d pick you in every lifetime.",
+      "I love you more than words can hold.",
+      "Every day with you is my favorite.",
+      "We're two hearts, one soul.",
+      "Even from miles away, you're close to me.",
+      "You are my calm, my safe, my home.",
+      "No distance can dull my love for you.",
+      "You're the best part of my day.",
+      "I'd hug you forever if I could.",
+      "Your love reaches across any distance.",
+      "You're my favorite notification.",
+      "Being apart just makes me love you more.",
+      "Our hearts speak even when our mouths can’t.",
+      "I fall for you every single day.",
+      "You're my sunrise and my moonlight.",
+      "I count down the seconds until I see you.",
+      "You are the piece of home I carry with me.",
+      "You're the smile behind my screen.",
+      "I’d time travel for a hug from you."
+    ];
+    document.getElementById("note").innerText = notes[Math.floor(Math.random() * notes.length)];
+  </script>
+</body>
+</html>
